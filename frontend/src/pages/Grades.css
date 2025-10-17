@@ -1,0 +1,132 @@
+.grades-page {
+  padding: 32px 0;
+  min-height: calc(100vh - 80px);
+}
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.grades-table-container {
+  background: var(--white);
+  border-radius: var(--border-radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow);
+}
+
+.grades-table-container h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 24px;
+}
+
+.grades-table {
+  overflow-x: auto;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1.5fr 1.5fr;
+  gap: 16px;
+  padding: 16px;
+  background: var(--light);
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  color: var(--dark);
+  font-size: 14px;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1.5fr 1.5fr;
+  gap: 16px;
+  padding: 20px 16px;
+  border-bottom: 1px solid var(--gray-light);
+  align-items: center;
+  transition: var(--transition);
+}
+
+.table-row:hover {
+  background: var(--light);
+}
+
+.table-cell {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.table-cell strong {
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.score-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.percentage-bar {
+  position: relative;
+  width: 100%;
+  height: 32px;
+  background: var(--gray-light);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.percentage-fill {
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+.percentage-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--dark);
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .table-header,
+  .table-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .table-header {
+    display: none;
+  }
+
+  .table-cell {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .table-cell::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--dark);
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+

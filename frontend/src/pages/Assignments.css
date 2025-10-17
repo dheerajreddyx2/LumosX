@@ -1,0 +1,263 @@
+.submission-file-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 18px 0 10px 0;
+}
+.download-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+}
+.download-btn-spacious {
+  padding: 12px 32px;
+  font-size: 1.08rem;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+.assignment-action-btn {
+  font-size: 1rem;
+  padding: 10px 24px;
+  min-width: 120px;
+  transition: transform 0.18s cubic-bezier(.4,2,.3,1);
+}
+.assignment-action-btn:hover {
+  transform: scale(1.12);
+}
+.assignments-page {
+  padding: 32px 0;
+  min-height: calc(100vh - 80px);
+}
+
+.assignment-header-card {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  border-radius: var(--border-radius-lg);
+  padding: 48px;
+  margin-bottom: 32px;
+  color: var(--white);
+}
+
+.assignment-header-content h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.assignment-header-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.95;
+  margin-bottom: 24px;
+}
+
+.assignment-details {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.submission-status {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 16px 20px;
+  border-radius: var(--border-radius);
+  margin-top: 16px;
+}
+
+.check-icon {
+  font-size: 32px;
+  color: var(--success);
+}
+
+.submission-status strong {
+  display: block;
+  font-size: 18px;
+}
+
+.grade-display {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+.submission-card,
+.submissions-section {
+  background: var(--white);
+  border-radius: var(--border-radius-lg);
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow);
+}
+
+.submission-card h2,
+.submissions-section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 24px;
+}
+
+.submission-content {
+  background: var(--light);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  margin-bottom: 24px;
+}
+
+.submission-content p {
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.grade-section {
+  padding-top: 24px;
+  border-top: 1px solid var(--gray-light);
+}
+
+.grade-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--dark);
+}
+
+.grade-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.grade-score {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.grade-percentage {
+  font-size: 18px;
+  color: var(--gray);
+}
+
+.feedback {
+  background: var(--light);
+  padding: 16px;
+  border-radius: var(--border-radius);
+}
+
+.feedback strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--dark);
+}
+
+.feedback p {
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+.submissions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.submission-item {
+  background: var(--light);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  transition: var(--transition);
+  overflow: hidden; /* ensure child content doesn't overflow the card */
+}
+
+.submission-item:hover {
+  background: var(--gray-light);
+}
+
+.submission-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.submission-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.submission-excerpt {
+  color: var(--gray);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.submission-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid var(--gray-light);
+  gap: 8px;
+  flex-wrap: wrap; /* allow buttons and labels to wrap on small widths */
+}
+
+.submission-footer .submission-date {
+  flex: 0 0 auto;
+}
+
+.submission-footer .submission-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.submission-date {
+  font-size: 13px;
+  color: var(--gray);
+}
+
+.grade-badge {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--success);
+}
+
+@media (max-width: 768px) {
+  .assignment-header-card {
+    padding: 32px 24px;
+  }
+
+  .assignment-header-content h1 {
+    font-size: 24px;
+  }
+
+  .assignment-details {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .submissions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+

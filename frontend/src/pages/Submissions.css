@@ -1,0 +1,129 @@
+.submissions-page {
+  padding: 32px 0;
+  min-height: calc(100vh - 80px);
+}
+
+.submissions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.submission-card-item {
+  background: var(--white);
+  border-radius: var(--border-radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.submission-card-item:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.submission-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.submission-card-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+
+.course-name {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+.submission-card-content {
+  background: var(--light);
+  padding: 16px;
+  border-radius: var(--border-radius);
+  margin-bottom: 16px;
+}
+
+.submission-card-content p {
+  color: var(--dark);
+  line-height: 1.6;
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.submission-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--gray-light);
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.grade-display-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, var(--success) 0%, #059669 100%);
+  color: var(--white);
+  padding: 12px 20px;
+  border-radius: var(--border-radius);
+}
+
+.grade-value {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.grade-percent {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.feedback-section {
+  background: var(--light);
+  padding: 16px;
+  border-radius: var(--border-radius);
+  margin-top: 16px;
+}
+
+.feedback-section strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--dark);
+  font-size: 14px;
+}
+
+.feedback-section p {
+  color: var(--gray);
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .submission-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .grade-display-card {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
